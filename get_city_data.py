@@ -2,7 +2,7 @@ import requests
 import json
 
 METRO_ARTIST_PREFIX =  'http://ws.audioscrobbler.com//2.0/?method=geo.getmetroartistchart'
-METRO_ARTIST_POSTFIX = '&limit=500&api_key=0ea35acc68848f320352bfa76c4c6494&format=json'
+METRO_ARTIST_POSTFIX = '&limit=1000&api_key=0ea35acc68848f320352bfa76c4c6494&format=json'
 
 
 cities = requests.get('http://ws.audioscrobbler.com/2.0/?method=geo.getmetros&api_key=0ea35acc68848f320352bfa76c4c6494&format=json').json
