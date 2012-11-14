@@ -21,6 +21,10 @@ artist_rankings = defaultdict( list )
 # Open the file
 file = open("artist_dump.json")
 
+# Sets to see number of unique items
+artist_set = set()
+metros = set()
+
 # Read the data city by city
 for line in file:
     if len(line) < 200:
@@ -30,6 +34,7 @@ for line in file:
     top_artists = json.loads(line) # The top artist in a metro
     top_artists = top_artists['topartists']
     metro = top_artists['@attr']['metro']
+    metros.add(metro)
     ranked_artists = top_artists['artist']
     for artist in ranked_artists:
         artist_name = artist['name'].lower() # TODO Remove special characters
@@ -37,8 +42,21 @@ for line in file:
 
         metro_artist_chart[metro].append(artist_name)	
         artist_rankings[artist_name].append( (metro, artist_rank) )
-        
-        
+
+# For each number one artist, store a counter of their popularity
+# number_one_artist['Muse'] =  5
+number_one_artists = defaultdict(int)
+for metro in metros:
+    number_one_artists[metro_artist_chart[metro][0]] += 1
+    #print metro + " : " + metro_artist_chart[metro][0]
+
+# Sort based on most popular
+for key, value in sorted(number_one_artists.iteritems(), key=lambda (k,v): (v,k)):
+    print "%s: %s" % (key, value)
+
+#print "Total cities: " + str(len(metros))
+#print "Total artists: " + str( len(artist_set) )
+
 # Lookup a band given as a parameter
 if len(sys.argv) > 1:
     search_term = sys.argv[1]
