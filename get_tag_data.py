@@ -2,6 +2,7 @@
 import requests
 import json
 import sys
+import time
 
 file = open("artist_dump.json")
 artist_set = set()
@@ -17,10 +18,14 @@ for line in file:
         artist_set.add(artist['name'].replace(' ','%20'))
 
 TAG_PREFIX =  'http://ws.audioscrobbler.com//2.0/?method=artist.gettoptags'
-TAG_POSTFIX = '&api_key=fee41939e7b3fb451b45351ff55a0514&format=json'
+TAG_POSTFIX = '&api_key=72cd3166245775a50c08b8b1f76bef1c&format=json'
 
 file = open("tag_dump.json", "w")
+i = 0
 for artist in artist_set: 
-    tag_string = TAG_PREFIX + '&artist=' + str(artist) + TAG_POSTFIX
+    i += 1
+    print "[" + str(i) + "]Requesting " + artist + " ......"
+    tag_string = TAG_PREFIX + '&artist=' + artist + TAG_POSTFIX
     top_tags = requests.get(tag_string)
     file.write(json.dumps(top_tags.json) + '\n')
+    time.sleep(1)   # last.fm recommends limiting to 1 call/second
