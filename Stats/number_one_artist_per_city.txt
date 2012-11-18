@@ -1,0 +1,229 @@
+city : most popular artist in city
+
+Monterrey : radiohead
+Manchester : radiohead
+San Diego : radiohead
+Szczecin : lana del rey
+Lille : radiohead
+Paris : c2c
+Bologna : radiohead
+Basel : the xx
+Rio de Janeiro : arctic monkeys
+Fortaleza : lana del rey
+Braga : ornatos violeta
+San Francisco : radiohead
+Bordeaux : c2c
+Zaragoza : muse
+Santiago : radiohead
+Liverpool : radiohead
+DALLAS : kanye west
+Sacramento : kanye west
+Innsbruck : mumford & sons
+El Paso : kanye west
+Cracow : faith no more
+Ekaterinburg : nelly furtado feat. timbaland
+Coimbra : radiohead
+Hamburg : the xx
+Nashville : mumford & sons
+Atlanta : kanye west
+Brussels : radiohead
+Tampa : kanye west
+Nantes : c2c
+Winterthur : mumford & sons
+Fukuoka : perfume
+Los Angeles : kendrick lamar
+Linköping : swedish house mafia
+Miami : kanye west
+Dublin : radiohead
+Bremen : the xx
+Rome : radiohead
+Newport : muse
+Christchurch : radiohead
+Charleroi : muse
+Rostock : kraftklub
+Marseille : c2c
+Taipei : toyo tsutsuli
+Exeter : muse
+Burgos : muse
+Cincinnati : mumford & sons
+Saitama : perfume
+Edmonton : mumford & sons
+Louisville : kanye west
+Minneapolis : radiohead
+Seville : nirvana
+Cologne : queen
+Nottingham : muse
+Milan : radiohead
+London : radiohead
+Syracuse : kanye west
+Osaka : perfume
+Liège : radiohead
+São Paulo : arctic monkeys
+Oslo : the xx
+Strasbourg : muse
+Auckland : radiohead
+Austin : radiohead
+Guadalajara : muse
+A Coruña : muse
+Sydney : radiohead
+Umeå : mumford & sons
+Curitiba : arctic monkeys
+Vienna : the xx
+Edinburgh : muse
+Linz : muse
+Pittsburgh : radiohead
+Ufa : linkin park
+Moscow : muse
+Guangzhou : taylor swift
+Mérida : radiohead
+Berlin : the xx
+Katowice : metallica
+Leeds : radiohead
+Malmö : mumford & sons
+Birmingham : radiohead
+Évora : radiohead
+Grenoble : adele
+Penza : muse
+Southampton : coldplay
+Graz : muse
+Setúbal : muse
+Salzburg : red hot chili peppers
+San Jose : coldplay
+Stuttgart : coldplay
+Magdeburg : the xx
+Barcelona : muse
+Puebla : radiohead
+Frankfurt : michael jackson
+Glasgow : radiohead
+Niigata : the beatles
+Oviedo : coldplay
+Gijón : muse
+Seattle : radiohead
+Zurich : the xx
+Metz : muse
+Madrid : muse
+Shizuoka : mr.children
+Matosinhos : radiohead
+Quebec : radiohead
+Bari : radiohead
+Aberdeen : muse
+Adelaide : radiohead
+Lyon : muse
+Belfast : radiohead
+Bristol : muse
+Istanbul : radiohead
+Richmond : kanye west
+Kyiv : muse
+Adana : coldplay
+Calgary : radiohead
+Rochester : kanye west
+Turin : neutral milk hotel
+Nice : lana del rey
+Columbus : kanye west
+Cleveland : kanye west
+Fribourg : coldplay
+Salamanca : muse
+Buffalo : kanye west
+Faro : coldplay
+Manaus : lana del rey
+Denver : radiohead
+Vila Nova de Gaia : radiohead
+Memphis : kanye west
+Brighton : radiohead
+Toronto : radiohead
+Palermo : muse
+Ciudad Juárez : strange celebrity
+Pensacola : bon iver
+Helsinki : muse
+Valparaíso : one direction
+Newcastle : muse
+Orlando : kanye west
+Wellington : radiohead
+Ottawa : radiohead
+Bilbao : muse
+Sendai : 東京事変
+Stockholm : mando diao
+Ryazan : linkin park
+Belém : arctic monkeys
+Genoa : muse
+Aveiro : ornatos violeta
+Hiroshima : perfume
+Montreal : radiohead
+Beijing : taylor swift
+Toulouse : c2c
+Bogotá : radiohead
+Las Vegas : kanye west
+Bursa : metallica
+New Orleans : kanye west
+Uppsala : kent
+Boston : kanye west
+Kobe : perfume
+Halifax : radiohead
+Florence : coldplay
+Bergen : kaizers orchestra
+Belo Horizonte : the beatles
+Mexicali : radiohead
+Granada : muse
+Porto : ornatos violeta
+Tianjin : taylor swift
+Antwerp : the rolling stones
+Shanghai : coldplay
+Virginia Beach : kanye west
+Nagoya : perfume
+Saint Petersburg : muse
+Winnipeg : radiohead
+Vancouver : radiohead
+Villahermosa : adele
+Porto Alegre : arctic monkeys
+Valencia : coldplay
+Naples : the rolling stones
+Clermont-Ferrand : muse
+Milwaukee : kanye west
+Dresden : coldplay
+Brasília : arctic monkeys
+Alicante : muse
+Kyoto : the beatles
+Tokyo : the beatles
+Munich : coldplay
+Berne : miguel
+Ankara : radiohead
+Lausanne : the xx
+Bragança : louis armstrong
+Gothenburg : mumford & sons
+Jacksonville : kanye west
+Chongqing : taylor swift
+Salvador : rihanna
+Little Rock : mumford & sons
+Murcia : muse
+Wichita : mumford & sons
+Saskatoon : the beatles
+Changsha : taylor swift
+Melbourne : radiohead
+Plymouth : radiohead
+Minsk : muse
+Phoenix : kanye west
+Detroit : kendrick lamar
+Nancy : radiohead
+Lucerne : rihanna
+Rennes : radiohead
+Recife : lana del rey
+Antalya : radiohead
+Portland : radiohead
+Baltimore : kanye west
+Tijuana : the killers
+Houston : radiohead
+Västerås : swedish house mafia
+Geneva : radiohead
+Montpellier : muse
+Philadelphia : kanye west
+Indianapolis : mumford & sons
+New York : kanye west
+West Palm Beach : coldplay
+Chicago : kanye west
+Lisbon : radiohead
+Cardiff : muse
+Amsterdam : the xx
+Copenhagen : the xx
+Sapporo : perfume
+Warsaw : coldplay
+

@@ -1,0 +1,43 @@
+artist : number of cities artist is number 1
+
+radiohead: 57
+muse: 37
+kanye west: 26
+coldplay: 14
+mumford & sons: 11
+the xx: 11
+perfume: 7
+arctic monkeys: 6
+c2c: 5
+lana del rey: 5
+taylor swift: 5
+the beatles: 5
+ornatos violeta: 3
+adele: 2
+kendrick lamar: 2
+linkin park: 2
+metallica: 2
+rihanna: 2
+swedish house mafia: 2
+the rolling stones: 2
+bon iver: 1
+faith no more: 1
+kaizers orchestra: 1
+kent: 1
+kraftklub: 1
+louis armstrong: 1
+mando diao: 1
+michael jackson: 1
+miguel: 1
+mr.children: 1
+nelly furtado feat. timbaland: 1
+neutral milk hotel: 1
+nirvana: 1
+one direction: 1
+queen: 1
+red hot chili peppers: 1
+strange celebrity: 1
+the killers: 1
+toyo tsutsuli: 1
+東京事変: 1
+

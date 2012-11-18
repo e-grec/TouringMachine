@@ -23,4 +23,4 @@ file = open("tag_dump.json", "w")
 for artist in artist_set: 
     tag_string = TAG_PREFIX + '&artist=' + str(artist) + TAG_POSTFIX
     top_tags = requests.get(tag_string)
-    file.write(json.dumps(top_tags.json))
+    file.write(json.dumps(top_tags.json) + '\n')
