@@ -16,10 +16,9 @@ for line in file:
     ranked_artists = top_artists['artist']
     for artist in ranked_artists:
         artist_set.add(artist['name'].replace(' ','%20'))
-
+API_KEY = ''
 TAG_PREFIX =  'http://ws.audioscrobbler.com//2.0/?method=artist.gettoptags'
-TAG_POSTFIX = '&api_key=72cd3166245775a50c08b8b1f76bef1c&format=json'
-
+TAG_POSTFIX = '&api_key=' + API_KEY + '&format=json'
 file = open("tag_dump.json", "w")
 i = 0
 for artist in artist_set: 
