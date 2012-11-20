@@ -102,7 +102,7 @@ class Recommender(object):
     # "likely" they are to enjoy the band
     def calc_recommendation(self, artist):
         parser = ParseDataDumps()
-        #TODO: change to use the api
+        #TODO: change to read from tag_data.json on large scale
         parser.parse_top_tags( artist + ".json" )
         user_dict = defaultdict(float)
         for tag_name, tag_count in parser.artist_tags['one direction']:

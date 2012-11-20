@@ -104,7 +104,6 @@ class ParseDataDumps(object):
 		self.tags.add(tag_name)
                 self.artist_tags[artist_name].append( (tag_name, tag_count) )
 
-
 if __name__=="__main__":
     # Lookup a band given as a parameter
     if len(sys.argv) > 1:

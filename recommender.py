@@ -8,7 +8,6 @@ from collections import defaultdict
 from scipy.stats.stats import pearsonr
 from math import sqrt 
 
-
 #cosine similarity helper functions
 def scalar(collection): 
     total = 0 
