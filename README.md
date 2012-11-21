@@ -12,3 +12,8 @@ python parse_data_dumps.py "dream theater"
 
 Where "dream theater" may be your favorite band (include quotes).  After entering the command, the script will 
 output the band's most popular cities and its tags.  To run tests, use nosetests.
+
+To run the recommender, run:
+python recommender.py
+
+This will run the recommendation algorithm on a small set of data and output a recommendation.
