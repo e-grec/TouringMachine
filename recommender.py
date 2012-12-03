@@ -52,6 +52,9 @@ class Recommender(object):
         # maps tags to summed weighted average unique to the user
         # weighted_user_vec['awesome'] = -76.79
         self.weighted_user_vec = defaultdict(float)
+    
+        # loads city_rankings.json, which is a serialized list of artists from each city.  The type maps cities as strings to a *ranked* list of artists within each city.
+        self.city_rankings = json.load(open('city_rankings.json'))
 
     #TODO: change to use the api http://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=DrCaverlee
     def get_user(self):
