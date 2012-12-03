@@ -55,7 +55,9 @@ class Recommender(object):
     
         # loads city_rankings.json, which is a serialized list of artists from each city.  The type maps cities as strings to a *ranked* list of artists within each city.
         self.city_rankings = json.load(open('city_rankings.json'))
-
+        self.artist_rankings = json.load(open('artist_rankings.json'))
+        self.artist_tags = json.load(open('artist_tags.json'))
+    
     #TODO: change to use the api http://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=DrCaverlee
     def get_user(self):
         # will give self.parser.artist_tags Caverlee's user tags
@@ -111,9 +113,20 @@ class Recommender(object):
                 user_dict[tag_name] = tag_count
         print "Caverlee is " + str(similarity(user_dict,self.weighted_user_vec)*100) + "% likely to enjoy the band One Direction"
 
+    def get_city_rankings(self, search_term):
+        result = defaultdict(dict)
+        for pair in self.artist_rankings[search_term]:
+            result[pair[0]]['city_name'] = pair[0]
+            result[pair[0]]['artist_rank'] = pair[1]
+            result[pair[0]]['band_name'] = search_term
+        print result
+        return result
+        
+
 if __name__=="__main__":
     recom = Recommender()
-    recom.get_user()
-    recom.calc_Pearson()
-    recom.calc_user_tag_vector()
-    recom.calc_recommendation('one_direction')
+    recom.get_city_rankings("queen")
+    #recom.get_user()
+    #recom.calc_Pearson()
+    #recom.calc_user_tag_vector()
+    #recom.calc_recommendation('one_direction')

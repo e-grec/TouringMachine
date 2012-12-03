@@ -64,6 +64,8 @@ class ParseDataDumps(object):
                 self.artists.add( artist_name )
                 self.metro_artist_chart[metro].append(artist_name)	
                 self.artist_rankings[artist_name].append( (metro, artist_rank) )
+            for artist in self.artist_rankings:
+                self.artist_rankings[artist] = sorted(self.artist_rankings[artist], key=lambda city:city[1])
 
         
     def parse_top_tags(self, file_name):
@@ -107,6 +109,13 @@ class ParseDataDumps(object):
         f = open('city_rankings.json', 'wb')
         f.write(json.dumps(self.metro_artist_chart))
         f.close()
+        f = open('artist_rankings.json', 'wb')
+        f.write(json.dumps(self.artist_rankings))
+        f.close()
+        f = open('artist_tags.json', 'wb')
+        f.write(json.dumps(self.artist_tags))
+        f.close()
+        
         #data = json.load(open('city_rankings.json'))
         #for city in data:
             #print "city: " + str(city)
