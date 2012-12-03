@@ -101,34 +101,21 @@ class ParseDataDumps(object):
 
                 self.artist_tags[artist_name].append( (tag_name, tag_count) )
 
+    def sendToFile(self):
+        cities = defaultdict(list)
+        self.parse_metro_artist_chart("artist_dump.json")
+        self.parse_top_tags("tag_dump.json")
+        f = open('city_rankings.json', 'wb')
+        json.dump(self.metro_artist_chart, f)
+            
 
 if __name__=="__main__":
     # Lookup a band given as a parameter
-    if len(sys.argv) > 1:
-        search_term = sys.argv[1]
-    else:
-        search_term = 'queen'
-
-
-    # Parse data dumps
+    #if len(sys.argv) > 1:
+     #   search_term = sys.argv[1]
+    #else:
+    #    search_term = 'queen'
     parser = ParseDataDumps()
-    parser.parse_metro_artist_chart( "artist_dump.json" )
-    parser.parse_top_tags( "tag_dump.json" )
+    parser.sendToFile()
 
-    artist_rankings = parser.artist_rankings
-    search_rankings = sorted(artist_rankings[search_term], key=lambda city:city[1])
-
-    artist_tags = parser.artist_tags[search_term]
-    #print artist_tags
-
-
-    print "--- Top Cities for " + search_term + " (in order) ---"
-    print "City: rank"
-
-    for city in search_rankings:
-        print city[0] + ": " + str(city[1])
-
-    print "--- Tags for " + search_term + " (in order) ---"
-    for tag in artist_tags:
-        print tag[0] + ": " + str(tag[1])
 
