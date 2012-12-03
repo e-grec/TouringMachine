@@ -102,12 +102,15 @@ class ParseDataDumps(object):
                 self.artist_tags[artist_name].append( (tag_name, tag_count) )
 
     def sendToFile(self):
-        cities = defaultdict(list)
         self.parse_metro_artist_chart("artist_dump.json")
         self.parse_top_tags("tag_dump.json")
         f = open('city_rankings.json', 'wb')
-        json.dump(self.metro_artist_chart, f)
-            
+        f.write(json.dumps(self.metro_artist_chart))
+        f.close()
+        #data = json.load(open('city_rankings.json'))
+        #for city in data:
+            #print "city: " + str(city)
+            #print "bands in city: " + str(data[city])
 
 if __name__=="__main__":
     # Lookup a band given as a parameter
