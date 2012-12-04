@@ -15,6 +15,7 @@ def scalar(collection):
         total += count * count 
     return sqrt(total) 
 
+
 def similarity(A,B):
     total = 0 
     for kind in A: 
