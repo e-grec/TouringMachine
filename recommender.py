@@ -66,7 +66,6 @@ class Recommender(object):
         self.artist_parser.parse_top_tags( "demo.json" )   
         self.tags = self.user_parser.tags.union(self.artist_parser.tags)
 
-    
     #calc_Pearson calculates the Pearson correlation of an artist to the user
     def calc_Pearson(self):
         a = set(self.user_parser.tags)        
