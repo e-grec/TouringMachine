@@ -43,21 +43,23 @@
         </div>
       </div>
 
-    </div> <!-- /container -->
+    </div> <!-- /container 0400826210101030  800-841-5432 x1581  -->
 
 <script id="city_template" type="text/template">
-	<div class="city_name"><%- city_name %> Band ranking for this city: <%- artist_rank %></div>
+	<div class="city_name"> Band ranking  in <%- city_name %>: <%- artist_rank %></div>
 	<div class="similar_artists">Similar artists in <%- city_name %>: </div>
+
 
 	<ol style="list-style-type: decimal;">
 		<!-- Possibly link these to artist profiles -->
-		<li><a href="http://www.last.fm/<%-band_name%>" <%- similar_artists[0] %> </a> </li>
-		<li><a href="http://www.last.fm/<%-band_name%>" <%- similar_artists[1] %> </a> </li>
-		<li><a href="http://www.last.fm/<%-band_name%>" <%- similar_artists[2] %> </a> </li>
-		<li><a href="http://www.last.fm/<%-band_name%>" <%- similar_artists[3] %> </a> </li>
-		<li><a href="http://www.last.fm/<%-band_name%>" <%- similar_artists[4] %> </a> </li>
+		<li><a href="http://www.last.fm/music/<%-band_name%>">  similar_artists[0]  </a>    (Similarity: artist_similarity) </li>
+		<li><a href="http://www.last.fm/music/<%-band_name%>">  similar_artists[1]  </a>    (Similarity: artist_similarity) </li>
+		<li><a href="http://www.last.fm/music/<%-band_name%>">  similar_artists[2]  </a>    (Similarity: artist_similarity) </li>
+		<li><a href="http://www.last.fm/music/<%-band_name%>">  similar_artists[3]  </a>    (Similarity: artist_similarity) </li>
+		<li><a href="http://www.last.fm/music/<%-band_name%>">  similar_artists[4]  </a>    (Similarity: artist_similarity) </li>
 	</ol>
 
+	<BR>
 </script>
 
 <script id="alert_template" type="text/template">

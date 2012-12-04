@@ -22,8 +22,8 @@ function ajax_search(q) {
         result_div.empty();
         result_div.show();
         result_div.append($(result_template(data)));
-        var tweet_divs = _.map(data.cities, city_template);
-        result_div.append(tweet_divs.join(''));
+        var city_divs = _.map(data.cities, city_template);
+        result_div.append(city_divs.join(''));
       },
       error: function(jqXHR,textStatus,errorThrown) {
         var error;
