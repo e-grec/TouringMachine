@@ -114,6 +114,9 @@ class Recommender(object):
         print "Caverlee is " + str(similarity(user_dict,self.weighted_user_vec)*100) + "% likely to enjoy the band One Direction"
 
     def get_city_rankings(self, search_term):
+        if not search_term in self.artist_rankings:
+            return []
+
         result = []
         for pair in self.artist_rankings[search_term]:
             result.append({'city_name':pair[0], 'artist_rank':pair[1], 'band_name':search_term})

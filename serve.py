@@ -13,7 +13,7 @@ _searcher = None
 @bottle.route('/bandsearch')
 def search(name='World'):
     global _searcher
-    query = bottle.request.query.q
+    query = bottle.request.query.q.lower()
     start_time = time.time()
     cities = _searcher.get_city_rankings(query)
     end_time = time.time()
