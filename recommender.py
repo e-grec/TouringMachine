@@ -128,7 +128,7 @@ class Recommender(object):
         counter = 0
         for pair in self.artist_rankings[search_term]:
             i = 0
-            if counter > 10:
+            if counter >= 10:
 		        break
             similar_artists = []
             similarity = []

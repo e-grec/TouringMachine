@@ -32,7 +32,7 @@
       <div class="row">
         <div id="bandsearch" class="span12">
           <h2>Search a band name to form a tour</h2>
-	      <h4 style="padding-bottom:7px;">Ex. "Pink Floyd"</h4>
+	      <h4 style="padding-bottom:7px;">Ex. "Queen"</h4>
           <form class="well form-inline">
             <input name="query" type="text" class="input-xlarge well" placeholder="Band Name" style="width: 100%; margin: 0 0 .5em 0;"><BR/>
             <button type="submit" class="btn btn-danger ">Form Tour</button>
@@ -63,22 +63,22 @@
 
 <script id="city_ranking_template" type="text/template">
 
-	<span> <%-relative_rank %>. <%- city_name %>, <%-country%> </span>
+	<span style="margin-left: -20px;"> <%-relative_rank %>. <%- city_name %>, <%-country%> </span>
 	
 	<BR>
 
 </script>
 
 <script id="similar_artist_ranking_template" type="text/template">
-	
-	<h2>Most Similar Artists:</h2>
+	<BR>
+	<span style=""><h3>Most Similar Artists:</h3> </span>
 
-	<ol style="list-style-type: decimal;">
-		<li><a href="http://www.last.fm/music/<%-similar_artists[0]%>"><%-  similar_artists[0]  %>:</a>    (Similarity: <%-similarity[0]%>%) </li>
-		<li><a href="http://www.last.fm/music/<%-similar_artists[1]%>"><%-  similar_artists[1]  %>:</a>    (Similarity: <%-similarity[1]%>%) </li>
-		<li><a href="http://www.last.fm/music/<%-similar_artists[2]%>"><%-  similar_artists[2]  %>:</a>    (Similarity: <%-similarity[2]%>%) </li>
-		<li><a href="http://www.last.fm/music/<%-similar_artists[3]%>"><%-  similar_artists[3]  %>:</a>    (Similarity: <%-similarity[3]%>%) </li>
-		<li><a href="http://www.last.fm/music/<%-similar_artists[4]%>"><%-  similar_artists[4]  %>:</a>    (Similarity: <%-similarity[4]%>%) </li>
+	<ol style="list-style-type: decimal; ">
+		<li><a href="#" onclick="ajax_search('<%-similar_artists[0]%>'); return false;"><%-similar_artists[0]  %>:</a>    (Similarity: <%-similarity[0]%>%) </li>
+		<li><a href="#" onclick="ajax_search('<%-similar_artists[1]%>'); return false;"><%-similar_artists[1]  %>:</a>    (Similarity: <%-similarity[1]%>%) </li>
+		<li><a href="#" onclick="ajax_search('<%-similar_artists[2]%>'); return false;"><%-similar_artists[2]  %>:</a>    (Similarity: <%-similarity[2]%>%)</li>
+		<li><a href="#" onclick="ajax_search('<%-similar_artists[3]%>'); return false;"><%-similar_artists[3]  %>:</a>    (Similarity: <%-similarity[3]%>%)</li>
+		<li><a href="#" onclick="ajax_search('<%-similar_artists[4]%>'); return false;"><%-similar_artists[4]  %>:</a>    (Similarity: <%-similarity[4]%>%)</li>
 	</ol>
 
 </script>
@@ -105,7 +105,7 @@
 <script id="result_template" type="text/template">
   <p class="result_message">
     <!-- Found <%- count %> cities in <%- time.toFixed(3) %> seconds.-->
-    <img src=" <%- google_maps_url %>" />
+    <img src=" <%- google_maps_url %>" align="left" style="padding-right: 50px;"/>
   </p>
 </script>
 

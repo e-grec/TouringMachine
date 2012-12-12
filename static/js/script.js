@@ -26,6 +26,7 @@ function ajax_search(q) {
         result_div.show();
         result_div.append($(result_template(data)));
         var city_divs = _.map(data.cities, city_ranking_template);
+		result_div.append("<h3>Top Cities for " + q + ":</h3>");
         result_div.append(city_divs.join(''));
 
 	var similar_artists = similar_artist_ranking_template(data.cities[0]);

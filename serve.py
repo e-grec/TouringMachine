@@ -10,7 +10,7 @@ from settings import settings
 
 _searcher = None
 
-MAPS_PREFIX = 'http://maps.googleapis.com/maps/api/staticmap?size=768x512'
+MAPS_PREFIX = 'http://maps.googleapis.com/maps/api/staticmap?size=768x380'
 MAPS_MARKERS = '&markers=size:mid%7Ccolor:red%7Clabel:'
 MAPS_POSTFIX = '&sensor=false'
 STYLE_TYPE = '7C'
