@@ -31,6 +31,7 @@ def search(name='World'):
         city_num += 1
     gmurl += MAPS_POSTFIX
     print "gmurl: " + gmurl
+    #Return dict
     return dict(
             cities = cities,
             count = len(cities),

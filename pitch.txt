@@ -1,0 +1,16 @@
+Howdy!
+
+I assume you all know what the Turing Machine is; a seemingly archaic and boring theoretical construct used to prove computation is possible. 
+However, Alan Turing was certainly not a boring man.  A cool British guy like that had to like the best jazz of the time...for instance, 
+he probably liked artists such as Nat King Cole and Miles Davis.  He probably liked artists such as these so much, in fact, that he probably
+tried to write his own data miner using his very own Turing Machine in order to determine where they were most popular, so he could give them
+advice on where to tour!  Sadly, the Turing Machine is theoretical, and Al Gore hadn't invented the internet yet.  
+
+Fast forward another 60 years or so, and such a thing is now possible with social networking sites such as Last.fm!  Indeed, we have carried
+on the good name of Alan Turing by inventing the Touring Machine.  Simply type in the name of an artist or band name
+in the field provided, and form a tour.  Our magnificent machine has the ability to visualize where you will want to travel in order to build a tour
+by finding where the artist you entered is most popular according to data acquired from Last.fm.  In addition, the Touring Machine will give you
+suggestions on who you may wish to tour with!  
+
+No longer will you be left wondering where to schedule gigs.  With the Touring Machine, nearly anything is possible!  (for everything possible, please
+see the Turing Machine).
