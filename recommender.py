@@ -59,7 +59,7 @@ class Recommender(object):
         #self.city_rankings = json.load(open('city_rankings.json'))
         self.artist_rankings = json.load(open('artist_rankings.json'))
         self.artist_tags = json.load(open('artist_tags.json'))
-        self.recommendations = json.load(open('calculated_artist_recommendation.json'))
+        self.recommendations = json.load(open('artist_recommendation.json'))
     
     #TODO: change to use the api http://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=DrCaverlee
     def get_user(self):
