@@ -7,6 +7,7 @@ from collections import defaultdict
 # make sure you have installed: sudo apt-get install python-numpy python-scipy
 from scipy.stats.stats import pearsonr
 from math import sqrt 
+from math import log
 
 #cosine similarity helper functions
 def scalar(collection): 
@@ -55,10 +56,10 @@ class Recommender(object):
         self.weighted_user_vec = defaultdict(float)
     
         # loads city_rankings.json, which is a serialized list of artists from each city.  The type maps cities as strings to a *ranked* list of artists within each city.
-        self.city_rankings = json.load(open('city_rankings.json'))
+        #self.city_rankings = json.load(open('city_rankings.json'))
         self.artist_rankings = json.load(open('artist_rankings.json'))
         self.artist_tags = json.load(open('artist_tags.json'))
-        self.recommendations = json.load(open('artist_recommendation.json'))
+        self.recommendations = json.load(open('calculated_artist_recommendation.json'))
     
     #TODO: change to use the api http://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=DrCaverlee
     def get_user(self):
@@ -126,8 +127,8 @@ class Recommender(object):
         counter = 0
         for pair in self.artist_rankings[search_term]:
             i = 0
-	    if counter > 8:
-		break
+            if counter > 10:
+		        break
             similar_artists = []
             similarity = []
             for i in range(5):
@@ -135,12 +136,64 @@ class Recommender(object):
                 similarity.append(str(round(self.recommendations[search_term][i][1]*100,2)))
             counter+=1
             result.append({'city_name':pair[0], 'relative_rank':counter,'similar_artists':similar_artists,'similarity':similarity,'band_name':search_term})
-               
+        print len(pair)
         return result
         
 
+    # For each artist, store a (city, ranking) pair
+    # self.artist_rankings['Muse'] =  [('boston', 4), (dallas, 41), ...]
+    # Store a list of (tag, count) pairs for each artist
+    # self.artist_tags['Queen'] = [('rock', 75), ('classic', 55), ...]
+    def cal_recommendation(self):
+        #df['rock'] = 453
+        #tf=1+log(tf)
+        #idf=log(9979/df)
+        #tf-idf['Queen']={<float>, 'rock':0.445, 'awesome':.566}
+        df = defaultdict(int)
+        recommendation = defaultdict(list)
+        newlist = defaultdict(list)
+        weighted_artist = defaultdict(list)
+        for artist in self.artist_tags:
+            for pair in self.artist_tags[artist]:
+                df[pair[0]] += 1
+        count = 0
+        for artist in self.artist_tags:
+            tfidf = defaultdict(float)
+            for pair in self.artist_tags[artist]:
+                if df[pair[0]] == 0:
+                    break
+                if pair[1] <= 1:
+                    if pair[1] == 1:
+                        tf = 1
+                    else:
+                        tf = 0
+                else:
+                    tf = 1.0 + log(2,pair[1]*1.0)
+                idf = log(2,9979*1.0/df[pair[0]])
+                tfidf[pair[0]]=tf*idf
+            count += 1
+            weighted_artist[artist] = tfidf
+        
+        
+        count = 0
+        copy = weighted_artist
+        for artist in weighted_artist:
+            for compared_artist in copy:
+                if artist != compared_artist:
+                    if similarity(weighted_artist[artist],copy[compared_artist]) != 0:
+                        recommendation[artist].append((compared_artist,similarity(weighted_artist[artist],weighted_artist[compared_artist])))
+            recommendation[artist] = sorted(recommendation[artist], key=lambda recommendation:recommendation[1],reverse=True)[:10]
+            count += 1
+            print count
+                
+        f = open('calculated_artist_recommendation.json', 'wb')
+        f.write(json.dumps(recommendation))
+        f.close()
+
+
 if __name__=="__main__":
     recom = Recommender()
+    #recom.cal_recommendation()
     recom.get_city_rankings("queen")
     #recom.get_user()
     #recom.calc_Pearson()
