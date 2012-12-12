@@ -46,7 +46,7 @@
 
 <script id="city_template" type="text/template">
 	<h2>Most Similar Artists:</h2>
-	<div class="city_name"> Band ranking  in <%- city_name %>: <%- relative_rank %></div>
+	<div class="city_name"> Band ranking  in <%- city_name %>, <%-country%> <%- relative_rank %></div>
 	<div class="similar_artists">Similar artists to <%- band_name %>: </div>
 
 	<ol style="list-style-type: decimal; counter-reset: item 0">
@@ -63,7 +63,7 @@
 
 <script id="city_ranking_template" type="text/template">
 
-	<span> <%-relative_rank %>. <%- city_name %> </span>
+	<span> <%-relative_rank %>. <%- city_name %>, <%-country%> </span>
 	
 	<BR>
 

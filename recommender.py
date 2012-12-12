@@ -59,7 +59,8 @@ class Recommender(object):
         #self.city_rankings = json.load(open('city_rankings.json'))
         self.artist_rankings = json.load(open('artist_rankings.json'))
         self.artist_tags = json.load(open('artist_tags.json'))
-        self.recommendations = json.load(open('calculated_artist_recommendation.json'))
+        self.recommendations = json.load(open('artist_recommendation.json'))
+	self.country = json.load(open('city_country_conversion.json'))
     
     #TODO: change to use the api http://ws.audioscrobbler.com/2.0/?method=user.gettoptags&user=DrCaverlee
     def get_user(self):
@@ -135,7 +136,7 @@ class Recommender(object):
                 similar_artists.append(self.recommendations[search_term][i][0])
                 similarity.append(str(round(self.recommendations[search_term][i][1]*100,2)))
             counter+=1
-            result.append({'city_name':pair[0], 'relative_rank':counter,'similar_artists':similar_artists,'similarity':similarity,'band_name':search_term})
+            result.append({'city_name':pair[0],'country':self.country[pair[0]], 'relative_rank':counter,'similar_artists':similar_artists,'similarity':similarity,'band_name':search_term})
         print len(pair)
         return result
         
